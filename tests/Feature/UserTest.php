@@ -15,6 +15,9 @@ class UserTest extends TestCase
      */
     public function testExample()
     {
-        $this->assertTrue(true);
+       // $this->assertTrue(true);
+       $response=$this->withSession(['foo'=>'bar'])->get('/');
+       $response->assertStatus(200);
+       
     }
 }
