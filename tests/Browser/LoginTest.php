@@ -16,18 +16,18 @@ class LoginTest extends DuskTestCase
      */
     public function testExample()
     {
-              
-                 $this->browse(function(Browser $browser)
+        $user=factory(User::class)->create(['email'=>'root@example.com']);
+                 $this->browse(function(Browser $browser) use ($user)
                             {
-                                $user=factory(User::class)->create();
+                               
                                 $browser->visit('login')
                                         ->type('email',$user->email)
                                        // ->type('password',$user->password)
                                         ->type('password','secret')
                                         ->press('Login')
                                         ->assertPathIs('/home');
-                               // $user->forceDelete();
-                            }
-                );
+                               // 
+                            });
+        $user->forceDelete();
     }
 }
