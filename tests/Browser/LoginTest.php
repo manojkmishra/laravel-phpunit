@@ -16,7 +16,8 @@ class LoginTest extends DuskTestCase
      */
     public function testExample()
     {
-        $user=factory(User::class)->create(['email'=>'root@example.com']);
+       // $user=factory(User::class)->create(['email'=>'root@example.com']);
+        $user=factory(User::class)->create();
                  $this->browse(function(Browser $browser) use ($user)
                             {
                                
