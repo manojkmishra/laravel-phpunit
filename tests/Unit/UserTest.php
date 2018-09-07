@@ -17,7 +17,6 @@ class UserTest extends TestCase
     {
         //$this->assertTrue(true);
       //  $response = $this->get('/'); //can be any api or url
-
        // $response->assertStatus(404); //this test fails
        // $response->assertStatus(200); //---this test pass
 
